@@ -1,0 +1,12 @@
+Big Section
+===========
+
+This section covers the core aspects of our project documentation.
+
+.. toctree::
+   :maxdepth: 1
+
+   introduction
+   coding_standard
+   git_conventions
+   tools
