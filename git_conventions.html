@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to GM Documentation &mdash; gm-docs-ref 0.0 documentation</title>
+  <title>Git Conventions &mdash; gm-docs-ref 0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -19,7 +19,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction" href="introduction.html" /> 
+    <link rel="next" title="Tools" href="tools.html" />
+    <link rel="prev" title="Coding Standard" href="coding_standard.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -30,7 +31,7 @@
 
           
           
-          <a href="#" class="icon icon-home">
+          <a href="index.html" class="icon icon-home">
             gm-docs-ref
           </a>
 <div role="search">
@@ -42,10 +43,15 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="coding_standard.html">Coding Standard</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git_conventions.html">Git Conventions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Git Conventions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#branching-model">Branching Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commit-messages">Commit Messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pull-requests-and-reviews">Pull Requests and Reviews</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a></li>
 </ul>
 
@@ -55,17 +61,17 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">gm-docs-ref</a>
+          <a href="index.html">gm-docs-ref</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Welcome to GM Documentation</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Git Conventions</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/git_conventions.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -73,42 +79,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="welcome-to-gm-documentation">
-<h1>Welcome to GM Documentation<a class="headerlink" href="#welcome-to-gm-documentation" title="Link to this heading"></a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="coding_standard.html">Coding Standard</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="coding_standard.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coding_standard.html#formatting">Formatting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coding_standard.html#comments-and-documentation">Comments and Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coding_standard.html#code-structure">Code Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="coding_standard.html#best-practices">Best Practices</a></li>
+  <section id="git-conventions">
+<h1>Git Conventions<a class="headerlink" href="#git-conventions" title="Link to this heading"></a></h1>
+<section id="branching-model">
+<h2>Branching Model<a class="headerlink" href="#branching-model" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Main Branch:</strong> Contains stable, production-ready code.</p></li>
+<li><p><strong>Feature Branches:</strong> Create a new branch for each feature or bugfix (e.g., <cite>feature/&lt;feature-name&gt;</cite> or <cite>bugfix/&lt;issue-number&gt;</cite>).</p></li>
+<li><p><strong>Develop Branch (Optional):</strong> Some projects use a <cite>develop</cite> branch as an integration branch before merging into main.</p></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="git_conventions.html">Git Conventions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="git_conventions.html#branching-model">Branching Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git_conventions.html#commit-messages">Commit Messages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git_conventions.html#pull-requests-and-reviews">Pull Requests and Reviews</a></li>
+</section>
+<section id="commit-messages">
+<h2>Commit Messages<a class="headerlink" href="#commit-messages" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Use the imperative mood in the subject line (e.g., &quot;Add new feature&quot;, &quot;Fix bug in module&quot;).</p></li>
+<li><p>Keep the subject line to 50 characters or less.</p></li>
+<li><p>Separate the subject from the body with a blank line if a more detailed description is needed.</p></li>
+<li><p>Explain what and why vs. how in the commit message body.</p></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tools.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools.html#development-tools">Development Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools.html#collaboration-and-communication">Collaboration and Communication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools.html#deployment-tools">Deployment Tools</a></li>
+</section>
+<section id="pull-requests-and-reviews">
+<h2>Pull Requests and Reviews<a class="headerlink" href="#pull-requests-and-reviews" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Always create a pull request when merging feature branches.</p></li>
+<li><p>Provide clear descriptions and reference relevant issues.</p></li>
+<li><p>Ensure at least one team member reviews the changes before merging.</p></li>
 </ul>
-</li>
-</ul>
-</div>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="coding_standard.html" class="btn btn-neutral float-left" title="Coding Standard" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tools.html" class="btn btn-neutral float-right" title="Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

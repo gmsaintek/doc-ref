@@ -1,0 +1,36 @@
+Coding Standard
+===============
+
+Overview
+--------
+
+This document outlines our coding standards to ensure code quality, readability, and maintainability across the project.
+
+Formatting
+----------
+
+- Use 4 spaces per indentation level.
+- Limit lines to a maximum of 80 characters where possible.
+- Use meaningful variable and function names.
+- Follow the PEP8 style guidelines for Python projects (or your relevant language style guide).
+
+Comments and Documentation
+--------------------------
+
+- Write clear and concise comments.
+- Use docstrings for all public modules, functions, classes, and methods.
+- Document the purpose, parameters, return types, and exceptions of functions.
+
+Code Structure
+--------------
+
+- Organize code into modules and packages logically.
+- Separate business logic from presentation and data access layers.
+- Use consistent naming conventions and file structures.
+
+Best Practices
+--------------
+
+- Write unit tests for your code.
+- Refactor regularly to improve clarity and performance.
+- Use version control to track changes and collaborate effectively.

@@ -1,0 +1,27 @@
+Tools
+=====
+
+Overview
+--------
+
+This document lists and explains the tools we use to manage development, collaboration, and deployment.
+
+Development Tools
+-----------------
+
+- **IDE/Text Editor:** We use Visual Studio Code for coding.
+- **Version Control:** Git is our primary tool for source control.
+- **Build System:** Sphinx is used for generating project documentation.
+
+Collaboration and Communication
+-------------------------------
+
+- **Issue Tracking:** GitHub Issues for managing bugs and feature requests.
+- **Code Reviews:** Pull requests on GitHub are used for code reviews and collaboration.
+- **Chat/Communication:** Slack or Microsoft Teams is used for team communication.
+
+Deployment Tools
+----------------
+
+- **Continuous Integration:** Jenkins (or GitHub Actions) automates building and testing.
+- **Hosting:** GitHub Pages is used to deploy documentation and project websites.

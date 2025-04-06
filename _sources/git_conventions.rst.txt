@@ -1,0 +1,24 @@
+Git Conventions
+===============
+
+Branching Model
+---------------
+
+- **Main Branch:** Contains stable, production-ready code.
+- **Feature Branches:** Create a new branch for each feature or bugfix (e.g., `feature/<feature-name>` or `bugfix/<issue-number>`).
+- **Develop Branch (Optional):** Some projects use a `develop` branch as an integration branch before merging into main.
+
+Commit Messages
+---------------
+
+- Use the imperative mood in the subject line (e.g., "Add new feature", "Fix bug in module").
+- Keep the subject line to 50 characters or less.
+- Separate the subject from the body with a blank line if a more detailed description is needed.
+- Explain what and why vs. how in the commit message body.
+
+Pull Requests and Reviews
+-------------------------
+
+- Always create a pull request when merging feature branches.
+- Provide clear descriptions and reference relevant issues.
+- Ensure at least one team member reviews the changes before merging.
